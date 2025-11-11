@@ -26,3 +26,36 @@ const prices = {
     Sugar: 0.20
   }
 };
+class Smoothie {
+  constructor(size, ingredients, base, sweetener) {
+    this.size = size;
+    this.ingredients = ingredients;
+    this.base = base;
+    this.sweetener = sweetener;
+  }
+
+
+  getTotalPrice() {
+    let total = 0;
+    total += prices.size[this.size];
+    total += prices.base[this.base];
+    total += prices.sweetener[this.sweetener];
+    this.ingredients.forEach(ingredient => {
+      total += prices.ingredients[ingredient];
+    });
+    return total.toFixed(2);
+  }
+
+
+  getDescription() {
+    return `
+      <h2>Your Smoothie</h2>
+      <p><strong>Size:</strong> ${this.size}</p>
+      <p><strong>Ingredients:</strong> ${this.ingredients.join(', ') || 'None'}</p>
+      <p><strong>Base:</strong> ${this.base}</p>
+      <p><strong>Sweetener:</strong> ${this.sweetener}</p>
+      <p><strong>Total Price:</strong> $${this.getTotalPrice()}</p>
+    `;
+  }
+}
+
