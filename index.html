@@ -30,11 +30,27 @@
       <select id="base" name="base">
         <option value="Water">Water ($0.00)</option>
         <option value="Almond Milk">Almond Milk ($0.50)</option>
-        <option value="Coconut Water">Milk ($0.70)</option>
+        <option value="Coconut">Milk ($0.70)</option>
         <option value="Yogurt">Yogurt ($0.95)</option>
       </select>
 
-</form>
+         <label for="sweetener">Sweetener:</label>
+      <select id="sweetener" name="sweetener">
+        <option value="None">None ($0.00)</option>
+        <option value="Honey">Honey ($0.30)</option>
+        <option value="Sugar Cane">Sugar Cane ($0.25)</option>
+        <option value="Sugar">Sugar ($0.20)</option>
+      </select>
+
+
+      <button type="submit">Order Smoothie</button>
+      </form>
+      
+
+    <div class="output-wrapper">
+      <div id="output"></div>
+      <div id="smoothieImage"></div>
+    </div>
   </div>
 
   <script src="script.js"></script>
