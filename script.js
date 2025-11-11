@@ -58,4 +58,26 @@ class Smoothie {
     `;
   }
 }
+document.getElementById('smoothieForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+
+  const size = document.getElementById('size').value;
+  const base = document.getElementById('base').value;
+  const sweetener = document.getElementById('sweetener').value;
+  const ingredients = Array.from(document.querySelectorAll('input[name="ingredients"]:checked')).map(i => i.value);
+
+
+  const smoothie = new Smoothie(size, ingredients, base, sweetener);
+  document.getElementById('output').innerHTML = smoothie.getDescription();
+
+
+  
+document.getElementById('smoothieImage').innerHTML = `
+  <img src="mycartoonsmothi.png" alt="smoothie guy" />
+`;
+
+
+});
+
 
