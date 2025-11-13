@@ -1,12 +1,12 @@
 body {
-   font-family: 'Chewy', cursive;  
-  background-image: url('myfruitbg.avif'); 
+   font-family: 'Chewy', cursive;  /* Font source: https://fonts.google.com/specimen/Chewy */
+  background-image: url('myfruitbg.avif');  /* global font and background  for the whole page */ /* Background image source: https://slidesdocs.com/background/cute-cartoon-fruit-border-powerpoint-background_abf8a82908 */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
 }
-.container {
+.container { /* container for the smoothie form and output */
   max-width: 700px;
   margin: auto;
   background: lightpink;
@@ -16,23 +16,24 @@ body {
 }
 
 h1 {
-  font-family: 'Chewy', cursive;
+  font-family: 'Chewy', cursive; /* Page header styl*/
   text-align: center;
   color: #ff4081;
 }
-form {
+
+form { /*  Form layout with spacing */
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
 
-fieldset {
+fieldset { /* Ingredient selection box color */
   border: 2px solid lightskyblue;
 }
 
 
-button {
+button {  /*  Submit btn styling */
      font-family: 'Chewy', cursive;
      font-size: large;
   background-color: #ff4081;
@@ -49,7 +50,7 @@ button {
 }
 
 
-#output {
+#output { /* Smoothie desc box */
   flex: 1;
   padding: 15px;
   background: #e0f7fa;
@@ -71,8 +72,9 @@ button {
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
-select {
-  background-color: lightpink; /* or any color you like */
+
+select {  /*Dropdown styl for selects size, base, sweetenerr */
+  background-color: lightpink; 
   border: 2px solid lightskyblue;
   color: #333;
   font-family: 'Chewy', cursive;

@@ -1,4 +1,4 @@
-const prices = {
+const prices = { // pricign data for all smoothie choices
   size: {
     Small: 5.00,
     Medium: 5.59,
@@ -27,7 +27,7 @@ const prices = {
   }
 };
 class Smoothie {
-  constructor(size, ingredients, base, sweetener) {
+  constructor(size, ingredients, base, sweetener) { // smoothie class for custom order
     this.size = size;
     this.ingredients = ingredients;
     this.base = base;
@@ -35,7 +35,7 @@ class Smoothie {
   }
 
 
-  getTotalPrice() {
+  getTotalPrice() { // finds the total price on options
     let total = 0;
     total += prices.size[this.size];
     total += prices.base[this.base];
@@ -43,11 +43,11 @@ class Smoothie {
     this.ingredients.forEach(ingredient => {
       total += prices.ingredients[ingredient];
     });
-    return total.toFixed(2);
+    return total.toFixed(2); // format it to 2 decimals for money
   }
 
 
-  getDescription() {
+  getDescription() { //creating the description of your selected order 
     return `
       <h2>Your Smoothie</h2>
       <p><strong>Size:</strong> ${this.size}</p>
@@ -58,23 +58,24 @@ class Smoothie {
     `;
   }
 }
-document.getElementById('smoothieForm').addEventListener('submit', function (e) {
+document.getElementById('smoothieForm').addEventListener('submit', function (e) { // Event listener for form submission
   e.preventDefault();
 
 
-  const size = document.getElementById('size').value;
+  const size = document.getElementById('size').value; // finding all the selected values from the form 
   const base = document.getElementById('base').value;
   const sweetener = document.getElementById('sweetener').value;
-  const ingredients = Array.from(document.querySelectorAll('input[name="ingredients"]:checked')).map(i => i.value);
+
+    const ingredients = Array.from(document.querySelectorAll('input[name="ingredients"]:checked')).map(i => i.value);
 
 
-  const smoothie = new Smoothie(size, ingredients, base, sweetener);
+  const smoothie = new Smoothie(size, ingredients, base, sweetener); // a new smoothie obj with your selections
   document.getElementById('output').innerHTML = smoothie.getDescription();
 
 
-  
-document.getElementById('smoothieImage').innerHTML = `
-  <img src="mycartoonsmothi.png" alt="smoothie guy" />
+  //showing the photo next to the desc
+document.getElementById('smoothieImage').innerHTML = `   
+  <img src="mycartoonsmothi.png" alt="smoothie guy" />  <!-- Smoothie image from PNGTree: https://pngtree.com/freepng/cartoon-smoothie-ai-generative_14600711.html -->
 `;
 
 

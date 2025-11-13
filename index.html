@@ -8,15 +8,17 @@
 </head>
 <body>
   <div class="container">
-    <h1> Order A Yummy Smoothie!!!</h1>
+    <h1> 🍓Order A Yummy Smoothie!!!</h1> <!-- Strawberry emoji from Emojipedia: https://emojipedia.org/strawberry -->
     <form id="smoothieForm">
       <label for="size">Size:</label>
+      <!-- Dropdown for selecting smoothie size -->
       <select id="size" name="size">
         <option value="Small">Small Smoothie ($5.00)</option>
         <option value="Medium">Medium Smoothie ($5.59)</option>
         <option value="Large">Large  Smoothie($7.90)</option>
       </select>
                 <fieldset>
+                   <!-- Ingredient selection using checkboxes -->
         <legend>Choose Ingredients:</legend>
         <label><input type="checkbox" name="ingredients" value="Banana" /> Banana ($0.50)</label>
         <label><input type="checkbox" name="ingredients" value="Strawberry" /> Strawberry ($0.75)</label>
@@ -26,6 +28,8 @@
          <label><input type="checkbox" name="ingredients" value="Pineapple" /> Pineapple MY FAV ($0.90)</label>
                       <label><input type="checkbox" name="ingredients" value="Coconut" /> Coconut ($0.20)</label>
                 </fieldset>
+
+                 <!-- Dropdown for selecting base liquid -->
                  <label for="base">Base Drink:</label>
       <select id="base" name="base">
         <option value="Water">Water ($0.00)</option>
@@ -33,7 +37,7 @@
         <option value="Milk">Milk ($0.70)</option>
         <option value="Yogurt">Yogurt ($0.95)</option>
       </select>
-
+ <!-- Dropdown for selecting sweetener -->
          <label for="sweetener">Sweetener:</label>
       <select id="sweetener" name="sweetener">
         <option value="None">None ($0.00)</option>
@@ -42,11 +46,11 @@
         <option value="Sugar">Sugar ($0.20)</option>
       </select>
 
-
+<!-- Submit button to place the smoothie order -->
       <button type="submit">Order Smoothie</button>
       </form>
       
-
+ <!-- Output section to display smoothie summary and image -->
     <div class="output-wrapper">
       <div id="output"></div>
       <div id="smoothieImage"></div>
