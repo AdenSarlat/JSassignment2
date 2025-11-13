@@ -20,5 +20,56 @@ h1 {
   text-align: center;
   color: #ff4081;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+fieldset {
+  border: 5px solid lightskyblue;
+}
+
+
+button {
+     font-family: 'Chewy', cursive;
+     font-size: large;
+  background-color: #ff4081;
+  color: lightskyblue;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.output-wrapper {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+#output {
+  flex: 1;
+  padding: 15px;
+  background: #e0f7fa;
+  border-radius: 10px;
+}
+
+
+#smoothieImage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#smoothieImage img {
+    background-color:#e0f7fa;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
 
 
