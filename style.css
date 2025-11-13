@@ -28,7 +28,7 @@ form {
 
 
 fieldset {
-  border: 5px solid lightskyblue;
+  border: 2px solid lightskyblue;
 }
 
 
@@ -70,6 +70,14 @@ button {
   max-width: 100%;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+select {
+  background-color: lightpink; /* or any color you like */
+  border: 2px solid lightskyblue;
+  color: #333;
+  font-family: 'Chewy', cursive;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 
