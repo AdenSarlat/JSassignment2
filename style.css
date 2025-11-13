@@ -1,0 +1,24 @@
+body {
+   font-family: 'Chewy', cursive;  
+  background-image: url('myfruitbg.avif'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: lightpink;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-family: 'Chewy', cursive;
+  text-align: center;
+  color: #ff4081;
+}
+
+
